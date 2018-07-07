@@ -1,0 +1,25 @@
+from matplotlib import pyplot as plt
+percent = ['20%', '40%', '60%', '80%', '100%']
+x = [2,4,6,8,10]
+y = [1,2,3,4,5]
+plt.figure(figsize=(10,8))
+plt.plot(x,y)
+ax = plt.subplot()
+ax.set_xticks(x)
+ax.set_xticklabels(percent)
+plt.title('Made Up Graph')
+plt.xlabel('Percentage')
+plt.ylabel('Years')
+Legend_labels = ['Regression']
+plt.legend(Legend_labels)
+plt.show()
+
+import pandas as pd
+df = pd.dataframe([
+    ['East', 20, 100],
+    ['West', 40, 100],
+    ['South', 50, 80],
+    ['North', 70, 70]],
+    columns = ['Direction', 'Value1', 'Value2']
+)
+print(df.head())
